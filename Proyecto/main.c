@@ -34,12 +34,14 @@ int main(){
 			case 1:
 				
 				do{
-					printf("\t\t\t\t+-----+-----+-----+-----+-----+-----+----+-----+--+\n");
-					printf("\t\t\t\t+-----+| 1.Nuevo libro                     |+-----+\n");
-					printf("\t\t\t\t+-----+| 2.Dar de baja un libro            |+-----+\n");
-					printf("\t\t\t\t+-----+| 3.Agregar existencias             |+-----+\n");
-					printf("\t\t\t\t+-----+| 4.Regresar a la pagina principal  |+-----+\n");
-					printf("\t\t\t\t+-----+-----+-----+-----+-----+-----+----+-----+--+\n");
+					printf("\t\t\t\t+-----+-----+-----+-----+-----+-----+----+-----+----+-----+\n");
+					printf("\t\t\t\t+-----+| 1.Nuevo libro                             |+-----+\n");
+					printf("\t\t\t\t+-----+| 2.Dar de baja un libro                    |+-----+\n");
+					printf("\t\t\t\t+-----+| 3.Agregar existencias                     |+-----+\n");
+					printf("\t\t\t\t+-----+| 4.Ver lista de libros primero a ultimo    |+-----+\n");
+					printf("\t\t\t\t+-----+| 5.Ver lista de libros ultimo a primero    |+-----+\n");
+					printf("\t\t\t\t+-----+| 6.Regresar a la pagina principal          |+-----+\n");
+					printf("\t\t\t\t+-----+-----+-----+-----+-----+-----+----+-----+----+-----+\n");
 					scanf("%d",&a);
 					system("cls");
 					switch(a){
@@ -56,10 +58,18 @@ int main(){
 						break;
 						
 						case 4:
+						mostrarPU();
+						break;
+						
+						case 5:
+						mostrarUP();
+						break;
+
+						case 6:
 						break;
 					}
 					
-				}while(a!=4);			
+				}while(a!=6);			
 			break;
 				
 			case 2:
@@ -84,12 +94,11 @@ int main(){
 						break;
 						
 						case 3:
-							
 						break;
 						
 						case 4:
-							
 						break;
+							
 						case 5:
 							buscarISBN();
 						break;
